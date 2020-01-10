@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>JS Script</title>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
+</head>
+<body>
+    <div class="page-bar">
+        <div class="page-title-breadcrumb">
+            <form id="tblPerson">
+                <table>
+                    <tr>
+                        <th colspan="2">Contact Person</th>
+                    </tr>
+                    <tr>
+                        <td>Name</td>
+                        <td><input type="text" id="Name" name="Name" /></td>
+                    </tr>
+                    <tr>
+                        <td>Mobile No</td>
+                        <td><input type="text" id="MobileNo" name="MobileNo" /></td>
+                    </tr>
+                    <tr>
+                        <td>Address</td>
+                        <td><input type="text" id="Address" name="Address" /></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <button id="btnSubmit">Save</button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+
+<script>
+        $(document).ready(function () {
+            $('#btnSubmit').on('click', function () {
+                //var data = { Name: $('#Name').val(), MobileNo: $('#MobileNo').val(), Address: $('#Address').val() };
+                $data = $('#tblPerson').serialize();
+                alert($data);
+                confirm($data);
+                document.write($data);
+                document.writeln($data);
+                console.log($data);
+                //return false;
+                
+            });
+
+        });
+    </script>
+
+
+
+</body>
+</html>   
